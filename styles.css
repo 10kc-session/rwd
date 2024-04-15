@@ -1,0 +1,45 @@
+html{
+    box-sizing: border-box; /*Removing Problems With Magins , Borders , Padding , Align Items */
+}
+body{
+    margin: 0;
+    height: 100%;
+}
+.grid-container
+{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        'header' 'main' 'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;  
+}
+header
+{
+    grid-area: 'header'; /*Telling Web Browser That Header Belongs to Browser*/
+    background-color: rgb(109, 63, 117);
+    color: white;
+    font-size: 3rem;
+    font-weight: 600
+}
+main
+{
+    grid-area: 'main';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+footer
+{
+    grid-area: 'footer';
+    background-color: rgb(109, 63, 117);
+    color: white;
+}
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
